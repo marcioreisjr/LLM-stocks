@@ -1,0 +1,251 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f6f6f6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    background-color: black;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 0 0 8px 8px;
+}
+
+header img {
+    width: 340px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+/* Panels */
+
+.action-panel, .output-panel {
+    line-height: 1.4em;
+    display: flex;
+    height: 350px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1.5em 2em;
+}
+
+.output-panel {
+    display: none;
+    justify-content: flex-start;
+    border: 1px solid #e4e4e4;
+    padding: 1em 2em;
+    overflow: auto;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.loading-panel {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 400px;
+    text-align: center;
+}
+
+.output-panel p{
+    overflow-y: scroll;
+}
+
+/* text */
+
+h2 {
+    text-align: center;
+    font-weight: 400;
+    margin-top: -26px;
+    background-color: #f6f6f6;
+    padding: 0 10px;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+p.tag-line {
+    font-family: 'Comic Neue';
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.ticker-choice-display {
+    display: flex;
+    align-items: center;
+    height: 3em;
+}
+
+/* controls */
+
+form {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    text-align: center;
+    padding: .43em;
+    font-size: 15px;
+    margin-bottom: 1em;
+    width: 80%;
+}
+
+.form-input-control {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+
+#ticker-input:focus {
+    border: 1px solid #4659ff;
+    border-radius: 8px;
+}
+
+input[type="text"] {
+    padding: 1em;
+    border: 1px solid rgb(207, 206, 206);
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+}
+
+/* Buttons */
+
+.add-ticker-btn {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    font-size: 3em;
+    padding: 0 .35em;
+    cursor: pointer;
+    border: 1px solid rgb(207, 206, 206);
+    border-left: none;
+    border-radius: 0 8px 8px 0;
+}
+
+.add-ticker-svg {
+    width: 14px;
+}
+
+.generate-report-btn {
+    width: 70%;
+    padding: 1em 1.5em;
+    cursor: pointer;
+    font-family: 'Poppins', sans;
+    background-color: #4659ff;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .09em;
+    font-size: 105%;
+    border-radius: 8px;
+    border: none;
+    color: white;
+}
+.generate-report-btn:disabled {
+    background-color: #c4c4c4;
+    color: #ffffff;
+}
+
+/* ticker display (ensure comma separated) */
+
+.ticker {
+    margin: 0 .1em;
+    content: '';
+}
+
+.ticker:after {
+    content: ',';
+}
+
+.ticker:last-child::after {
+    content: '';
+}
+
+/* footer */
+
+footer {
+    font-size: 14px;
+    text-align: center;
+}
+
+/* stop ugly scroll bar on some browsers */
+.output-panel p::-webkit-scrollbar {
+    display: none;
+}
+
+.output-panel p::-moz-scrollbar {
+    display: none;
+}
+
+.header-img {
+    height: 75px;
+}
+
+.output-card {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* border: 2px solid; */
+    border-radius: 8px;
+    padding: 1em;
+    margin: 1em;
+}
+
+.ticker-grp {
+    display: flex;
+    /* Bold text */
+    font-weight: 600;
+    /* flex-direction: column; */
+    /* align-items: */
+    /* justify-content:space-around; */
+}
+
+.ticker-out {
+    display: flex;
+    /* flex-direction: row; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.ticker-sep {
+    margin: 0 0.5em;
+}
+
+.action-out {
+    display: flex;
+    /* flex-direction: row; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.reason-out {
+    display: flex;
+    /* flex-direction: row; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.c-sell {
+    background-color: rgb(243, 215, 215);
+}
+
+.c-buy {
+    background-color: rgb(214, 238, 214);
+}
+
+.c-hold {
+    background-color: rgb(212, 229, 235);
+}
